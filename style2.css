@@ -1,0 +1,47 @@
+@charset "utf-8";
+body{
+    background-color: gray;
+
+
+}
+main, article, header {
+    border:1px solid grey;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+main {
+    background-color: #ffcccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+}
+article {
+    width:calc(33.33333% - 10px);
+    margin: 5px;
+}
+
+main article:nth-child(3) {
+    color: red;
+    order: -1;
+}
+
+main header {
+    order: -2;
+}
+
+@media screen and (max-width:600px) {
+    main {
+        flex-direction:column;
+    }
+    article {
+        width: 100%;
+    }
+}
+
+span {
+    
+}
